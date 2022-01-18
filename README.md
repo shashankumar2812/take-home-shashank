@@ -1,8 +1,8 @@
-This file gives an overview of the assignment solution. I have included detailed notes in the respective sections of the notebooks for reference specifically around the choices and the assumptions I made. The
+This file gives an overview of the assignment solution. I have included detailed notes in the respective sections of the notebooks for reference specifically around the choices and the assumptions I made. Please find below details about the structure of the code:
 
 - README.md contains summary of the work
 - 01_exploratory_data_analysis.ipynb contains details of data exploration
-- 02_model_development.ipynb contaains details of model development steps
+- 02_model_development.ipynb contains details of model development steps
 
 ## Problem
 
@@ -12,15 +12,15 @@ Use the publicly available IMDB Datasets to build a model that predicts a movieâ
 
 The data for the solution can be found on following links:
 
-- IMDb Dataset Details [Data Description](https://www.imdb.com/interfaces/)
-- IMDb Dataset [Dataset](https://datasets.imdbws.com/)
+- IMDb [Dataset Description](https://www.imdb.com/interfaces/)
+- IMDb [Dataset](https://datasets.imdbws.com/)
 
-Note: I have used only 2 out of 5 tsv files to develop the solution in interest of time. More details will follow in the notebooks.
+Note: I have used only 2 out of 5 tsv files (`title.ratings.tsv` and `title.basics.tsv`) to develop the solution in interest of time. More details will follow in the notebooks.
 
 
 ## Approach
 
-I am solving this assignment as a standard regression problem for predicting movie ratings. My attempt while solving this assignment is to show the breadth of my knowledge and not necessarily build the best model. The current state of model development process is highly empirical and generally model development process takes multiple iterations to arrive at a solution. The general workflow in the notebook is as follows: 
+I am solving this assignment as a standard regression problem for predicting movie ratings. In general, I try to develop a non-ML solution first but assuming the assignment is meant to showcase my ML skills, I have attempted to solve this problem using ML. My attempt while solving this assignment is to show the breadth of my knowledge and not necessarily build the best model. The current state of model development process is highly empirical and generally model development process takes multiple iterations to arrive at a solution. The general workflow in the notebook is as follows: 
 
 1. Exploratory Data Analysis 
 
@@ -56,12 +56,14 @@ To choose the best solution, I will follow following strategy:
 - Model evaluation will be based on RMSE and the assumption is all the movies are equally important. 
 -  All movies having <10 votes are filtered out with an assumption that they are outliers (somewhat arbitrary cutoff).
 
+Other assumptions are listed in the respective sections of the notebooks.
+
 
 ## If I had more time in hand
 
 Given more time, I will consider following:
 
-- I will speak with Business stakeholders to better understand the problem and if required, customize the solution to suit their needs. Understanding the underlying meaning of data is also important.
+- I will speak with Business stakeholders to better understand the problem and if required, customize the solution to suit their needs. Understanding the underlying meaning of data is most important.
 - I will explore other csv files and develop more features to include in the model. I will __fix data quality issues__, if they exist. In my experience, this always results in the highest improvement in model performance.
 - I will iterate through exploratory data analysis, data preprocessing and data cleaning  process empirically.
 - If business dictates, I will design a production solution to get the benefits of the model on regular basis (I can think of a solution to build a Production Pipeline using Airflow, AWS SageMaker, Papermill, S3 and Snowflake).
